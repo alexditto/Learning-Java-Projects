@@ -2,6 +2,7 @@ package com.example.restservice;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,6 +35,16 @@ public class UserController {
     public String existingUserUsername(){
         User response = new User(id, username, password, email);
         return response.getUsername();
+    }
+
+    @DeleteMapping("/user")
+    public User deleteAllUsers(@RequestBody User user){
+        return user;
+    }
+
+    @DeleteMapping("/user/username")
+    public User deleteUser(@RequestBody User user){
+        return user;
     }
 
 }
