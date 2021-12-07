@@ -10,7 +10,7 @@ public class Character {
     private int wis;    
     private int cha;
 
-    public Character( long id, String characterName, int str, int dex, int con, int intel, int wis, int cha){
+    public Character(long id, String characterName, int str, int dex, int con, int intel, int wis, int cha){
         this.id = id;
         this.characterName = characterName;
         this.str = str;
