@@ -9,14 +9,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class StudentService {
 
-    public List<String> getStudents(){
-		Student steve = new Student(
-			(long) 1,
+    public List<Student> getStudents(){
+        return List.of(new Student(
+            (long) 1,
 			"Steve",
 			"email@email.com",
 			21,
 			LocalDate.of(2000, Month.JANUARY, 5)
-		);
-		return List.of(steve.toString());
+        ));
 	}
 }
