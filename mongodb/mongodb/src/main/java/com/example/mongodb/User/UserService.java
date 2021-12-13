@@ -3,11 +3,10 @@ package com.example.mongodb.User;
 import java.time.LocalDate;
 import java.util.List;
 
-import org.springframework.data.mongodb.repository.cdi.MongoRepositoryBean;
 import org.springframework.stereotype.Service;
 
 @Service
-public class UserService{
+public class UserService {
     public List<User> getUsers(){
         return List.of(
             new User(
@@ -16,5 +15,9 @@ public class UserService{
                     "email@email.com",
                     LocalDate.now()
                 ));
+    }
+
+    public User save(User user){
+        return user;
     }
 }
