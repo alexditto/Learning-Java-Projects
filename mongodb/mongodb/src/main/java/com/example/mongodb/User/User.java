@@ -2,8 +2,11 @@ package com.example.mongodb.User;
 
 import java.time.LocalDate;
 
+import org.springframework.data.annotation.Id;
+
 public class User {
-    private Long id;
+    @Id
+    private int id;
     private String username;
     private String email;
     private LocalDate createdDate;
@@ -11,7 +14,7 @@ public class User {
     public User() {
     
     }
-    public User(Long id, String username, String email, LocalDate createdDate){
+    public User(int id, String username, String email, LocalDate createdDate){
         this.id = id;
         this.username = username;
         this.email = email;
@@ -23,10 +26,10 @@ public class User {
         this.createdDate = createdDate;
     }
 
-    public Long getId(){
+    public int getId(){
         return id;
     }
-    public void setId(Long id){
+    public void setId(int id){
         this.id = id;
     }
     
