@@ -13,10 +13,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path="api/v1/users")
 public class UserController {
     private final UserService userService;
+    public UserRepository userRepository;
 
     @Autowired
     public UserController(UserService userService){
         this.userService = userService;
+    }
+
+    public UserRepository(UserRepository userRepository){
+        this.userRepository = userRepository;
     }
 
     @GetMapping()
@@ -24,10 +29,15 @@ public class UserController {
         return userService.getUsers();
     }
 
+    @GetMapping("/all")
+    public List<User> getAllStudents() {
+        return UserRepository.findAll()
+    }
+
     @PostMapping()
-    public User saveUser(@RequestBody User user){
+    public void saveUser(@RequestBody User user){
         // return userService.save(user);
         System.out.println(userService);
-        return userService.save(user);
+        userService.save(user);
     }
 }
