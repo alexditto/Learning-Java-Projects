@@ -20,19 +20,19 @@ public class UserController {
         this.userService = userService;
     }
 
-    public UserRepository(UserRepository userRepository){
-        this.userRepository = userRepository;
-    }
+    // public UserRepository(UserRepository userRepository){
+    //     this.userRepository = userRepository;
+    // }
 
     @GetMapping()
     public List<User> getUsers(){
         return userService.getUsers();
     }
 
-    @GetMapping("/all")
-    public List<User> getAllStudents() {
-        return UserRepository.findAll()
-    }
+    // @GetMapping("/all")
+    // public List<User> getAllStudents() {
+    //     return UserRepository.findAll()
+    // }
 
     @PostMapping()
     public void saveUser(@RequestBody User user){
