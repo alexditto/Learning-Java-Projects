@@ -1,8 +1,5 @@
 {
     "DockerRun.DisableDockerrc": true,
-    "DockerRun.Containers": [
-        "e5c034e2dfdf",
-        "7b99678a56a7"
-    ],
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "DockerRun.Containers": [],
+    "java.configuration.updateBuildConfiguration": "automatic"
 }

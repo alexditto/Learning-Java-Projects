@@ -1,8 +1,6 @@
 package tutorial.demo;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-import java.time.ZonedDateTime;
 import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
@@ -32,7 +30,7 @@ public class DemoApplication {
 				BigDecimal.TEN
 			);
 
-			repository.insert(student);
+			// repository.insert(student);
 		};
 	}
 
