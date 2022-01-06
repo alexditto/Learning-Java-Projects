@@ -1,5 +1,5 @@
 package tutorial.demo;
 
 public enum Gender {
-    MALE, FEMALE, NONBINARY
+    MALE, FEMALE, NONBINARY, NONE
 }
