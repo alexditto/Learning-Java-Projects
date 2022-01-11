@@ -30,7 +30,7 @@ public class DemoApplication {
 				BigDecimal.TEN
 			);
 
-			// repository.insert(student);
+			repository.insert(student);
 		};
 	}
 
